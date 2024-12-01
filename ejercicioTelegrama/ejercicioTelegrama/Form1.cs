@@ -16,14 +16,22 @@ namespace ejercicioTelegrama
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (radioUrgente.Checked)
             {
                 tipoTelegrama = 'u';
+            }
+            else if (radioOrdinario.Checked)
+            {
+                tipoTelegrama = ' ';
+            }
+            else {
+                MessageBox.Show("Por favor, selecciona la urgencia del telegrama");
+                return;
             }
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = textoTelegrama.Split(new char[] { ' ', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length;
             //Si el telegrama es ordinario
-            if (tipoTelegrama == '')
+            if (tipoTelegrama == ' ')
             {
                 if (numPalabras <= 10)
                 {

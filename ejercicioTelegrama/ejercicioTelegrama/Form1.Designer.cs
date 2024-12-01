@@ -35,9 +35,10 @@ namespace ejercicioTelegrama
             lblMensaje = new Label();
             txtTelegrama = new TextBox();
             btnCalcularPrecio = new Button();
-            chkUrgente = new CheckBox();
             txtPrecio = new TextBox();
             label1 = new Label();
+            radioOrdinario = new RadioButton();
+            radioUrgente = new RadioButton();
             SuspendLayout();
             // 
             // lblMensaje
@@ -67,16 +68,6 @@ namespace ejercicioTelegrama
             btnCalcularPrecio.UseVisualStyleBackColor = true;
             btnCalcularPrecio.Click += btnCalcularPrecio_Click;
             // 
-            // chkUrgente
-            // 
-            chkUrgente.AutoSize = true;
-            chkUrgente.Location = new Point(114, 324);
-            chkUrgente.Name = "chkUrgente";
-            chkUrgente.Size = new Size(84, 24);
-            chkUrgente.TabIndex = 5;
-            chkUrgente.Text = "Urgente";
-            chkUrgente.UseVisualStyleBackColor = true;
-            // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(175, 373);
@@ -93,14 +84,37 @@ namespace ejercicioTelegrama
             label1.TabIndex = 7;
             label1.Text = "Precio";
             // 
+            // radioOrdinario
+            // 
+            radioOrdinario.AutoSize = true;
+            radioOrdinario.Location = new Point(204, 323);
+            radioOrdinario.Name = "radioOrdinario";
+            radioOrdinario.Size = new Size(93, 24);
+            radioOrdinario.TabIndex = 8;
+            radioOrdinario.TabStop = true;
+            radioOrdinario.Text = "Ordinario";
+            radioOrdinario.UseVisualStyleBackColor = true;
+            // 
+            // radioUrgente
+            // 
+            radioUrgente.AutoSize = true;
+            radioUrgente.Location = new Point(96, 322);
+            radioUrgente.Name = "radioUrgente";
+            radioUrgente.Size = new Size(83, 24);
+            radioUrgente.TabIndex = 9;
+            radioUrgente.TabStop = true;
+            radioUrgente.Text = "Urgente";
+            radioUrgente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(radioUrgente);
+            Controls.Add(radioOrdinario);
             Controls.Add(label1);
             Controls.Add(txtPrecio);
-            Controls.Add(chkUrgente);
             Controls.Add(btnCalcularPrecio);
             Controls.Add(txtTelegrama);
             Controls.Add(lblMensaje);
@@ -114,8 +128,9 @@ namespace ejercicioTelegrama
         private Label lblMensaje;
         private TextBox txtTelegrama;
         private Button btnCalcularPrecio;
-        private CheckBox chkUrgente;
         private TextBox txtPrecio;
         private Label label1;
+        private RadioButton radioOrdinario;
+        private RadioButton radioUrgente;
     }
 }
